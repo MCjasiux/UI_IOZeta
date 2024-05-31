@@ -1,5 +1,4 @@
-
-export default [
+var toExport = [
     {
         selector: '#checkpoints',
         content: `Here are commands you need to use.`
@@ -25,4 +24,5 @@ export default [
         content: `These are instructions for your class.`
     },
 
-];
+]
+export default toExport;
