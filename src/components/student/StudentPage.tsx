@@ -56,7 +56,7 @@ const StudentPage = (props: any) => {
             .catch((e) => {
                 console.error("cannot fetch class data: " + e);
             })
-    }, [])
+    })
 
 
     return (

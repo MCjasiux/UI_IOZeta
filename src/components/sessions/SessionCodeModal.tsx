@@ -1,6 +1,5 @@
 import * as React from "react";
 import {Modal} from "react-bootstrap";
-import {useState} from "react";
 
 const SessionCodeModal = (props: {sessionCode: string, show: boolean, handleClose: () => void, handleShow: () => void}) => {
 

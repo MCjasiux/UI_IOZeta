@@ -41,7 +41,7 @@ const TopicSingle = () => {
         })
 
         fetchSessions()
-    }, [])
+    })
 
     const sessionComponents = sessions.map((session: any) =>
             <SessionComponent key={session.id+"session"} session={session} />

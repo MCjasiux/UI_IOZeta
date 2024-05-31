@@ -1,5 +1,3 @@
-import CheckpointObject from "./CheckpointObject";
-
 type StudentType = {
     name: string,
     commits: {

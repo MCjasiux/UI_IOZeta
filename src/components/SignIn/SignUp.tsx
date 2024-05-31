@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { Card, FormGroup, FormText, OverlayTrigger, Popover, Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
-import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import { useCookies } from "react-cookie";
 import SignUpValidator from "../../objects/validators/SignUpValidator";
@@ -10,7 +10,7 @@ import { BsFillInfoSquareFill } from "react-icons/bs";
 
 const SignUp = (props: { setUserLogin: (name: string) => string }) => {
     const navigate = useNavigate();
-    const [cookies, setCookie, removeCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
+    const [cookies, setCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
 
     const [firstName, setFirstName] = useState<string>("");
     const [surname, setSurname] = useState<string>("");
@@ -29,7 +29,7 @@ const SignUp = (props: { setUserLogin: (name: string) => string }) => {
         <Popover id="popover-basic">
             <Popover.Body className="text-light bg-dark">
                 <p>
-                    You can create token <a href="https://github.com/settings/tokens" target="_blank">here</a>. Scopes needed:
+                    You can create token <a href="https://github.com/settings/tokens" target="_blank" rel="noreferrer">here</a>. Scopes needed:
                     <ul>
                         <li>Token should have no time limit</li>
                         <li>Whole 'repo' scope</li>

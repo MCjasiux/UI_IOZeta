@@ -34,10 +34,9 @@ export default class Branch {
         this._lecturerNickname = value;
     }
 
-    public getCommand(): string{
+    public getCommand(): string {
 
-        return  "git clone https://github.com/"+ this.lecturerNickname +"/" + this.repoName +".git" + "\n" +
-            "git checkout " + this.name;
+        return "git clone https://github.com/" + this.lecturerNickname + "/" + this.repoName + ".git\ngit checkout " + this.name;
 
     }
 

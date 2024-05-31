@@ -40,7 +40,7 @@ const Readme = (props: propsType) => {
 
     function prefixImageSources(text: string, repoPath: string) {
         console.log(repoPath)
-        return text.replace(/\!\[(.*?)\]\((?!.*[a-z]\:\/\/)(.*?)\)/g, "![$1](https://raw.githubusercontent.com/" + repoPath + "/main/$2)")
+        return text.replace(/!\[(.*?)\]\((?!.*[a-z]:\/\/)(.*?)\)/g, "![$1](https://raw.githubusercontent.com/" + repoPath + "/main/$2)")
     }
 
     useEffect(() => {

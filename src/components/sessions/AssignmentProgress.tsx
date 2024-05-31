@@ -1,9 +1,8 @@
 import * as React from "react";
 import { Table } from "react-bootstrap";
-import CheckpointObject from "../../objects/CheckpointObject";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {Link, useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SessionDataObject from "../../objects/SessionDataObject";
 import CookieService from "../../objects/services/CookieService";
 
@@ -30,7 +29,7 @@ const AssignmentProgress = () => {
             }).catch((e) => {
                 console.error("cannot fetch progress data: " + e);
             })
-    }, [])
+    })
 
     return (
         <Table striped bordered hover>
@@ -54,7 +53,7 @@ const AssignmentProgress = () => {
                             {checkpoint.commits.map((commit: any) =>
                                 <th scope="row" key={commit.url}>
                                     {commit.url === "" ? "No commit yet" :
-                                        <a href={"https://www." + commit.url} target="_blank" >
+                                        <a href={"https://www." + commit.url} target="_blank" rel="noreferrer" >
                                             Link to commit
                                         </a>
                                     }

@@ -71,7 +71,7 @@ const Topic = (props: propsType) => {
                 <div className="">
                     <div className="mb-3">
                         {"repository name: "}
-                        <a href={repoLink()} target="_blank">{props.topic.repoName}</a>
+                        <a href={repoLink()} target="_blank" rel="noreferrer">{props.topic.repoName}</a>
                     </div>
                     <div id="readme" className='d-flex justify-content-center scrollbar-primary'>
                         <Readme topicName={""} readmeUrl={props.topic.readmeLink}  />

@@ -10,7 +10,7 @@ import CookieService from "../../../objects/services/CookieService";
 const SubjectList = () => {
 
     const [subjects, setSubjects] = useState<Subject[]>([]);
-    const [cookies, setCookie, removeCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
+    const [cookies] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
 
     useEffect( () => {
          axios({
@@ -26,7 +26,7 @@ const SubjectList = () => {
                 console.error("cannot fetch subjects: " + e);
             })
 
-    }, [])
+    })
 
 
     const subjectComponents = subjects.map((subject) => <SubjectComponent subject={subject} key={subject.name + "" + subject.lecturer.name + "" + subject.lecturer.surname} />);

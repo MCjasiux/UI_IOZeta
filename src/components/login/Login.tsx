@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Button, Card, FormGroup, FormText} from "react-bootstrap";
+import {Card, FormGroup, FormText} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import LoginValidator from "../../objects/validators/LoginValidator";
@@ -9,7 +9,8 @@ import {useCookies} from "react-cookie";
 
 
 const Login = (props: {setUserLogin: (name: string) => string}) =>{
-    const [cookies, setCookie, removeCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
+
+    const [cookies, setCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
 
     const [loginError, setLoginError] = useState<string>("");
     const [passwordError, setPasswordError] = useState<string>("");

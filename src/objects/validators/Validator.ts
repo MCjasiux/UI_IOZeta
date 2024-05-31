@@ -1,6 +1,6 @@
 export default class Validator{
     protected stringNotEmpty(data: string){
-        return data !== undefined && data !== null && data.length != 0;
+        return data !== undefined && data !== null && data.length !== 0;
     }
 
     protected stringHasLengthBetween(testedString: string, low: number, high: number){

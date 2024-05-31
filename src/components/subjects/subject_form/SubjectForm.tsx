@@ -4,7 +4,6 @@ import {useState} from "react";
 import SubjectValidator from "../../../objects/validators/SubjectValidator";
 import axios from "axios";
 import CookieService from "../../../objects/services/CookieService";
-import {useCookies} from "react-cookie";
 
 const SubjectForm = () => {
     const [name, setName] = useState<string>("");

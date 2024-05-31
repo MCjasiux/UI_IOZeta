@@ -44,7 +44,7 @@ const TopicForm = () => {
             })
         }
 
-    }, [])
+    })
 
     const [subjects, setSubjects] = useState<Subject[]>([]);
     const subjectOptions = subjects.map((subject) => <option key={"key-option-topic"+subject.name} value={subject.name}>{subject.name}</option>)
@@ -180,7 +180,6 @@ const TopicForm = () => {
     const [titleError, setTitleError] = useState<string>("");
     const [subjectError, setSubjectError] = useState<string>("");
     const [repoNameError, setRepoNameError] = useState<string>("");
-    const [readmeLinkError, setReadmeLinkError] = useState<string>("");
     const [checkPointNumberError, setCheckPointNumberError] = useState<string>("");
     const [checkPointTitleErrors, setCheckPointTitleErrors] = useState<string[]>([]);
     const [checkPointDescriptionErrors, setCheckPointDescriptionErrors] = useState<string[]>([]);
@@ -194,7 +193,7 @@ const TopicForm = () => {
             {showFailAlert ? <Alert variant="danger">An error occurred while adding topic</Alert> : null }
             {!!addFilesLink && <Card.Header className="mt-3">
                 <p><strong>To add your project please visit this website:</strong></p>
-                <a href={addFilesLink} target="_blank">{addFilesLink}</a>
+                <a href={addFilesLink} target="_blank" rel="noreferrer">{addFilesLink}</a>
                 <p className="mt-2"><strong>If you're new to github, please follow steps described below: </strong></p>
                 <ul>
                     <li>1. Drag folder with your code to "Drag files area"</li>
