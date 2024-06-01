@@ -9,7 +9,7 @@ import {useCookies} from "react-cookie";
 
 
 const Login = (props: {setUserLogin: (name: string) => string}) =>{
-
+    // @ts-ignore
     const [cookies, setCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
 
     const [loginError, setLoginError] = useState<string>("");

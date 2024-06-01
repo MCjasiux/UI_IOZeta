@@ -16,7 +16,7 @@ const Home = () => {
     const [message, setMessage] = useState<string>("");
     const [githubUsername, setGithubUsername] = useState<string>("");
     const [code, setCode] = useState<string>("");
-
+    // @ts-ignore
     const [cookies, setCookie, removeCookie] = useCookies(['session_id', 'student_id']);
 
     const handleUsernameChange = (e:React.ChangeEvent<HTMLInputElement>) => setGithubUsername(e.target.value);

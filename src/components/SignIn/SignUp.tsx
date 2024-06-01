@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Card, FormGroup, FormText, OverlayTrigger, Popover, Button } from "react-bootstrap";
+import { Card, FormGroup, FormText, OverlayTrigger, Popover } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
@@ -10,6 +10,7 @@ import { BsFillInfoSquareFill } from "react-icons/bs";
 
 const SignUp = (props: { setUserLogin: (name: string) => string }) => {
     const navigate = useNavigate();
+    // @ts-ignore
     const [cookies, setCookie] = useCookies(['access_token', 'refresh_token', 'username', 'lecturer_id']);
 
     const [firstName, setFirstName] = useState<string>("");
